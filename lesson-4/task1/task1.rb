@@ -1,13 +1,3 @@
-# todo:
-#
-#  DONE 1) index() - return the whole txt file 
-#  DONE 2) find(id) - finds a line and returns it
-#  DONE 3) where(pattern) - finds all lines with a matched pattern
-#  DONE 4) update(id, text) - finds and updates a line
-#  DONE 5) delete(id) - removes a line  
-#  DONE 6) create(name) - adds a line to the files`s end
-#
-#   id - line index
 
 
 FILE_PATH = "file.txt"
@@ -89,27 +79,3 @@ def create(text, file_path)
 
 end
 
-
-
-
-create('Abobus', FILE_PATH)
-create('SUgoma', FILE_PATH)
-create('i hate lections lmao', FILE_PATH)
-create('No, really, i truly do', FILE_PATH)
-
-
-
-where("Abo", FILE_PATH)
-puts '________'
-update(2, "Among us", FILE_PATH, BUFFER )
-puts '________'
-find(3, FILE_PATH)
-puts '________'
-index(FILE_PATH)
-puts '________'
-
-delete(2, FILE_PATH, BUFFER)
-puts '________'
-index(FILE_PATH)
-puts '________'
-# file_handle.close
