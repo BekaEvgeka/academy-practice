@@ -28,13 +28,13 @@ end
 def deposit(current_balance)
   puts 'Enter how much would you like to deposit. The amount must be positive.'
   loop do
-    response = gets.chomp
+    response = gets.chomp.to_f
 
-    if response.to_f.positive?
+    if response.positive?
 
-      current_balance = current_balance.to_f + response.to_f
+      current_balance = current_balance.to_f + response
       puts "Deposited $#{response} to your balance"
-      return current_balance.to_f
+      return current_balance
     else
       puts 'You`ve entered a bad number, please try again!'
     end
@@ -45,12 +45,12 @@ def withdraw(current_balance)
   puts 'Enter how much would you like to withdraw. The amount must be positive.'
 
   loop do
-    response = gets.chomp
+    response = gets.chomp.to_f
 
-    if response.to_f.positive?
-      if response.to_f <= current_balance.to_f
-        current_balance = current_balance.to_f - response.to_f
-        puts "Witrdrawn $#{response.to_f} from your account"
+    if response.positive?
+      if response <= current_balance.to_f
+        current_balance = current_balance.to_f - response
+        puts "Witrdrawn $#{response} from your account"
         return current_balance
       else
         puts 'Sorry, but you don`t have enough money to withdraw this much'
